@@ -20,3 +20,11 @@ export interface Source {
     name?: string;
 } 
 //El signo de interrogación significa que es opcional ese atributo
+
+
+export interface ArticlesByCategoryAndPage {
+    [key: string]:{
+        page: number,
+        articles: Article[]
+    }
+}
