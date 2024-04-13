@@ -9,13 +9,18 @@ import { AppComponent } from './app.component';
 
 import {HttpClientModule} from '@angular/common/http'; //Si es un modulo se agrega en imports
 
+import { InAppBrowser} from '@awesome-cordova-plugins/in-app-browser/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
             IonicModule.forRoot(),
             AppRoutingModule,
             HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+              { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+              InAppBrowser
+            ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -38,7 +38,7 @@ export class Tab2Page implements OnInit{
   loadData(){
     this.newsService.getTopHeadLinesByCategory(this.selectedCategory, true)
     .subscribe( (articles) => {
-
+      console.log(articles.length);
       if(articles.length === this.articles.length){
         this.infiniteScroll.disabled = true;
         // event?.target.complete();
